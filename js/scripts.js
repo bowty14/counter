@@ -8,8 +8,16 @@ $(document).ready(function() {
     for (var index = 0; index <= firstNum; index += secondNum) {
       alert(index);
     }
+    
+    
+    if (isNaN(firstNum) || isNaN(secondNum)) {
+      $("#output").text("Empty is not a number");
+      //alert("Empty is not a number!")
+    } else if (firstNum < 0) {
+      $("#output").text("You've got to be positive!")
+    } else if (secondNum > firstNum) {
+      $("#output").text("Well that is obviously not gonna work!")
+    }
 
   });
 });
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
